@@ -5,14 +5,14 @@ using UnityEngine;
 public class NewEnemyMovement : MonoBehaviour
 {
     Transform player;
-    PlayerHealth playerHealth;
+    NewPlayerHealth playerHealth;
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerHealth = player.GetComponent<PlayerHealth>();
+        playerHealth = player.GetComponent<NewPlayerHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
