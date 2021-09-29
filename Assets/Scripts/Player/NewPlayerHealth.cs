@@ -25,7 +25,7 @@ public class NewPlayerHealth : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<NewPlayerMovement>();
 
-        /*playerShooting = GetComponentInChildren<PlayerShooting>();*/
+        playerShooting = GetComponentInChildren<PlayerShooting>();
         currentHealth = startingHealth;
     }
 
@@ -59,14 +59,14 @@ public class NewPlayerHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
-        /*playerShooting.DisableEffects();*/
+        playerShooting.DisableEffects();
         anim.SetTrigger("Die");
 
         playerAudio.clip = deathClip;
         playerAudio.Play();
 
         playerMovement.enabled = false;
-        /*playerShooting.enabled = false;*/
+        playerShooting.enabled = false;
     }
 
     public void RestartLevel()

@@ -16,7 +16,7 @@ namespace CompleteProject
         float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 #endif
 
-        private void Awake ()
+        void Awake ()
         {
 #if !MOBILE_INPUT
             // Create a layer mask for the floor layer.
@@ -29,7 +29,7 @@ namespace CompleteProject
         }
 
 
-        private void FixedUpdate ()
+        void FixedUpdate ()
         {
             // Store the input axes.
             float h = CrossPlatformInputManager.GetAxisRaw("Horizontal");

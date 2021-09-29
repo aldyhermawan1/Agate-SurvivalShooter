@@ -8,7 +8,7 @@ public class NewEnemyAttack : MonoBehaviour
     Animator anim;
     GameObject player;
     NewPlayerHealth playerHealth;
-    EnemyHealth enemyHealth;
+    NewEnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
 
@@ -17,7 +17,7 @@ public class NewEnemyAttack : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<NewPlayerHealth>();
         anim = GetComponent<Animator>();
-        /*enemyHealth = GetComponent<EnemyHealth>();*/
+        enemyHealth = GetComponent<NewEnemyHealth>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,7 +40,7 @@ public class NewEnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && playerInRange /*&& enemyHealth.currentHealth > 0*/)
+        if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
         {
             Attack();
         }
