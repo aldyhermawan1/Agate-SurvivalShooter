@@ -39,7 +39,6 @@ public class NewPlayerHealth : MonoBehaviour
         {
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
-
         damaged = false;
     }
 
