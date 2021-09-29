@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    public PlayerHealth playerHealth;       
+    public NewPlayerHealth playerHealth;       
     public float restartDelay = 5f;            
 
 
